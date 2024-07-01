@@ -1,0 +1,38 @@
+<div nz-row nzJustify="space-around" style="margin-top:20px;margin-bottom: 10px;">
+<div nz-col nzSpan="16" *ngIf='comments.length>0'>
+    <div class="card-wrapper" style="margin-bottom: 10px;cursor: pointer;" *ngFor="let comment of comments;let i = index"
+       >
+        <nz-card style="width:100%;" [nzTitle]="comment.userName" [nzExtra]="extraTemplate">
+         <!--    <p class="blog-content" [innerHTML]="htmlList[i]">
+                {{htmlList[i]}}
+            </p> -->
+            <p class="comment-content" [innerHTML]="comment.content">
+                {{comment.content}}
+            </p>
+         
+        </nz-card>
+        <ng-template #extraTemplate>
+            {{comment.createTime}}
+        </ng-template>
+    </div>
+
+ 
+</div>
+</div>
+<div nz-row nzJustify="space-around" style="margin-top:20px;margin-bottom: 10px;">
+
+
+    <form nz-form  (ngSubmit)="onAddComment()">
+        <nz-form-item>
+          <nz-form-control>
+          
+            <ckeditor id="editor" style="height:800px;width:600px;" [editor]="Editor" [(ngModel)]="commentSingle.content" name="edit"></ckeditor>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control>
+            <button nz-button nzType="primary" type="submit">Post Comment</button>
+          </nz-form-control>
+        </nz-form-item>
+      </form>
+    </div>

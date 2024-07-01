@@ -1,0 +1,65 @@
+<nz-layout class="app-layout">
+  <ul nz-menu nzMode="horizontal" style="position: relative;">
+    <li nz-menu-item nzSelected>
+      <span [routerLink]="['/']" routerLinkActive='router-link-active'>
+        <i nz-icon nzType="home"></i>
+     Main
+      </span>
+    </li>
+    <li nz-menu-item (click)='goTopublic()'>
+      <i nz-icon nzType="form"></i>
+      POST
+    </li>
+    <li nz-menu-item (click)='aboutBlog()'>
+      <i nz-icon nzType="bold"></i>
+      Comments
+      </li>
+    <li nz-menu-item (click)='aboutMe()'>
+      <i nz-icon nzType="user"></i>
+      About Me
+    </li>
+ <!--    <li nz-menu-item  (click)='gotoWebExample()'>
+      <i nz-icon nzType="html5"></i>
+      前端实例
+    </li> -->
+    <li nz-menu-item style="position: absolute;right: 5%;" [style.display]="loginKey?'none':'block'">
+      <span (click)="loginWithRedirect()">
+        <i nz-icon nzType="login" nzTheme="outline"></i>
+        Log in
+      </span>
+
+    </li>
+   <li nz-submenu [nzTitle]="extraTemplate"  style="position: absolute;right: 5%;" [style.display]="loginKey?'block':'none'">
+      <ul>
+  <!--     <li nz-menu-group >
+           <ul>
+            <li nz-menu-item>
+              <span [routerLink]="['/myblog']" routerLinkActive='router-link-active'>
+                <i nz-icon nzType="bold" nzTheme="outline"></i>
+                My Stuff
+              </span>
+              
+            </li> 
+          
+          </ul>
+        </li>
+-->
+        <li nz-menu-group >
+          <ul>
+            <li nz-menu-item (click)="logout()">
+              <i nz-icon nzType="logout" nzTheme="outline"></i>
+              Logout
+            </li>
+            
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <ng-template #extraTemplate >
+      <nz-avatar nzIcon="user" [nzSrc]='userInfo.image' ></nz-avatar>
+ <!--     <nz-avatar nzIcon="user" [nzSrc]='photo' ></nz-avatar> -->
+<!--       <span style="margin-left:8px">{{userInfo['username']}}</span> -->
+<span style="margin-left:8px">{{userInfo.userName}}</span>
+   </ng-template>
+  </ul>
+</nz-layout>

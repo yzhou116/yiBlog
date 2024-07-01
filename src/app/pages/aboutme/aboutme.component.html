@@ -1,0 +1,105 @@
+<div nz-row nzJustify="space-around" style="margin-top:20px;margin-bottom: 10px;">
+    <div nz-col nzSpan="20">
+        <nz-card>
+            <div class="userinfo">
+                <nz-avatar nzIcon="user" nzSrc="assets/imgs/dog.jpg" class="user-logo"></nz-avatar>
+                <div>
+                    <h4 style="font-size: 20px;">John Zhou</h4>
+                    <p>Welcome to my page.</p>
+                </div>
+            </div>
+            <div style="margin-top: 20px;">
+                <h4 nz-typography style="font-size: 20px;">About Me</h4>
+                <p nz-typography>
+
+                    Hello:
+                    My name is Yi Zhou, and I'm a skilled and dedicated software developer with extensive experience and a passion for creating innovative solutions. 
+                    At work, I've successfully delivered a few projects. Various change requirements were encountered in the project, and they were all delivered perfectly in the end.
+                     I love to learn, share and am passionate about new technologies. My skills include Java, Spring Boot, PHP, Angular, JavaScript, jQuery, React, MySQL, HTML, CSS, and Git.
+                      I am also familiar with .NET, C#, Vue, Android, Python, iOS, Test Automation, AWS Cloud, Google Cloud and Twilio services.
+                    <br/>
+                    
+                    Please go to my <a href="https://www.linkedin.com/in/john-zhou-66388799/">linkdin page</a>. Please add me as 
+                    your connection, I would much appreciate it. Or you can send me an email at <a href="mailto:yzhou116@gmail.com">yzhou116@gmail.com</a> .
+                
+                       <br/>
+                    Have a nice day ! :)
+                </p>
+            </div>
+            <div style="margin-top: 20px;">
+                <h4 nz-typography style="font-size: 20px;">Personal Project</h4>
+                <div nz-row nzJustify="space-between">
+                    <div nz-col nzSpan='6'>
+                        <nz-card nzHoverable style="width:100%" [nzCover]="vueblogTemplate" (click)="openEmailProgram()" >
+                            <nz-card-meta nzTitle="Email Blast" nzDescription="Use content template and csv file to send the multiple email at the same time."></nz-card-meta>
+                        </nz-card>
+                        <ng-template #vueblogTemplate>
+                            <img alt="example" src="assets/imgs/johnEmail.png" />
+                        </ng-template>
+                    </div>
+                    <div nz-col nzSpan='6'>
+                        <nz-card nzHoverable style="width:100%" [nzCover]="wechatTemplate">
+                            <nz-card-meta nzTitle="HR Resume System" nzDescription="I am working on it"></nz-card-meta>
+                        </nz-card>
+                        <ng-template #wechatTemplate>
+                            <img alt="example" src="assets/imgs/hrsystem.jpg" />
+                        </ng-template>
+                    </div>
+                 <!--    <div nz-col nzSpan='6'>
+                        <nz-card nzHoverable style="width:100%" [nzCover]="myblogTemplate">
+                            <nz-card-meta nzTitle="纯原生JS个人主页" nzDescription="http://42.194.193.249:3240"></nz-card-meta>
+                        </nz-card>
+                        <ng-template #myblogTemplate>
+                            <img alt="example" src="../../../assets/imgs/myblog.png" />
+                        </ng-template>
+                    </div> -->
+                </div>
+                <div nz-row nzJustify="space-between" style="margin-top: 10px;">
+                 <!--    <div nz-col nzSpan='6'>
+                        <nz-card nzHoverable style="width:100%" [nzCover]="webModalTemplate">
+                            <nz-card-meta nzTitle="前端开发常见模板整理" nzDescription="http://xxxxx"></nz-card-meta>
+                        </nz-card>
+                        <ng-template #webModalTemplate>
+                            <img alt="example" src="../../../assets/imgs/webModal.png" />
+                        </ng-template>
+                    </div> -->
+                  <!--   <div nz-col nzSpan='6'>
+                        <nz-card nzHoverable style="width:100%" [nzCover]="vueshopTemplate">
+                            <nz-card-meta nzTitle="vue移动端商城" nzDescription="http://42.194.193.249:3260/"></nz-card-meta>
+                        </nz-card>
+                        <ng-template #vueshopTemplate>
+                            <img alt="example" src="../../../assets/imgs/vueshop.png" />
+                        </ng-template>
+                    </div> -->
+                  <!--   <div nz-col nzSpan='6'>
+                        <nz-card nzHoverable style="width:100%" [nzCover]="vueshopadminTemplate">
+                            <nz-card-meta nzTitle="vue商城后台管理" nzDescription="http://xxxxxxx"></nz-card-meta>
+                        </nz-card>
+                        <ng-template #vueshopadminTemplate>
+                            <img alt="example" src="../../../assets/imgs/vueshopadmin.png" />
+                        </ng-template>
+                    </div> -->
+                </div>
+                <div nz-row nzJustify="space-between" style="margin-top: 10px;">
+                 <!--    <div nz-col nzSpan='6'>
+                        <nz-card nzHoverable style="width:100%" [nzCover]="reactadminTemplate">
+                            <nz-card-meta nzTitle="React商城后台管理" nzDescription="http://xxxxx"></nz-card-meta>
+                        </nz-card>
+                        <ng-template #reactadminTemplate>
+                            <img alt="example" src="../../../assets/imgs/reactadmin.png" />
+                        </ng-template>
+                    </div> -->
+                 <!--    <div nz-col nzSpan='6'>
+                        <nz-card nzHoverable style="width:100%" [nzCover]="musicTemplate">
+                            <nz-card-meta nzTitle="仿网易云音乐播放器" nzDescription="http://42.194.193.249:3010/"></nz-card-meta>
+                        </nz-card>
+                        <ng-template #musicTemplate>
+                            <img alt="example" src="../../../assets/imgs/musicbg.jpg" />
+                        </ng-template>
+                    </div> -->
+                  
+                </div>
+            </div>
+        </nz-card>
+    </div>
+</div>

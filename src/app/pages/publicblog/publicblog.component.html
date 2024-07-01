@@ -1,0 +1,47 @@
+<div class="public-blog">
+
+  <div nz-row>
+    <div nz-col nzSpan="22" nzOffset="1">
+      <div style="padding:30px;width: 100%;z-index: 1;">
+        <nz-card style="width:100%;" [nzBordered]="false" [nzTitle]="blogtitle1" [nzExtra]="extraTemplate">
+          <ckeditor id="editor" style="height:400px;" [editor]="Editor" [(ngModel)]="blogcontent" name="edit"></ckeditor>
+      
+        
+        <!--   <div class="wangeditor-box">
+        
+          
+          <div id="editorMenu"></div>
+            <div id="editor" style="height:400px;max-height:500px;z-index: 1;">
+
+            </div>
+
+
+          </div> -->
+        </nz-card>
+
+      </div>
+
+      <ng-template #extraTemplate>
+        <button nz-button nzType="primary" (click)="showPublicModal()">Publish Article</button>
+      </ng-template>
+      <ng-template #blogtitle1>
+        <input nz-input placeholder="Enter Title" [(ngModel)]="blogtitle" style="width: 500px;margin-left: 40px;" />
+      </ng-template>
+    </div>
+  </div>
+
+</div>
+
+<nz-modal [(nzVisible)]="isVisible" nzTitle="Publish Article" [nzContent]="modalContent" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()" >
+
+  <ng-template #modalContent>
+    <p> <input nz-input placeholder="Label" [(ngModel)]="blogsort" /></p>
+    <!-- <p><input nz-input placeholder="文章类型" [(ngModel)]="blogtype" /></p> -->
+    <p><nz-select nzShowSearch nzAllowClear nzPlaceHolder="Article Type" [(ngModel)]="blogtype" style="width: 100%;">
+      <nz-option nzLabel="Yours" nzValue="Yours"></nz-option>
+      <nz-option nzLabel="Others" nzValue="Others"></nz-option>
+   <!--    <nz-option nzLabel="翻译" nzValue="翻译"></nz-option> -->
+    </nz-select></p>
+  </ng-template>
+
+</nz-modal>
